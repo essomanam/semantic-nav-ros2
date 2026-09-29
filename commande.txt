@@ -1,0 +1,7 @@
+sudo apt update && sudo apt install -y \
+  ros-dev-tools ros-jazzy-ros-gz \
+  ros-jazzy-navigation2 ros-jazzy-nav2-bringup \
+  ros-jazzy-slam-toolbox ros-jazzy-vision-msgs \
+  ros-jazzy-nav2-minimal-tb4-sim
+
+
