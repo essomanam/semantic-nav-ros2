@@ -1,0 +1,8 @@
+# True object positions in the map frame, read from the Gazebo world (.sdf).
+# Warning: the SLAM map frame starts at the robot spawn pose, not at the world
+# origin. Subtract the spawn pose (x, y, yaw) from the world coordinates.
+objects:
+  - {label: chair, x: 2.10, y: -1.30}
+  - {label: chair, x: 2.80, y: -1.25}
+  - {label: couch, x: -1.50, y: 2.40}
+  - {label: potted plant, x: 0.40, y: 3.10}

@@ -1,0 +1,40 @@
+# Topic names depend on the simulated robot: check them in week 1 with
+#   ros2 topic list | grep -iE "image|depth|camera_info"
+# and update the three *_topic values below.
+detector:
+  ros__parameters:
+    use_sim_time: true
+    rgb_topic: /rgbd_camera/image
+    model: yolo11n.pt           # nano model: fast on CPU, enough to start
+    confidence: 0.4
+    device: cpu                 # "cuda:0" if you have an NVIDIA GPU
+    classes: [""]               # e.g. ["chair", "couch", "potted plant"]; empty = all
+    publish_annotated: true
+
+localizer:
+  ros__parameters:
+    use_sim_time: true
+    depth_topic: /rgbd_camera/depth_image
+    camera_info_topic: /rgbd_camera/camera_info
+    map_frame: map
+    max_range: 6.0
+    sync_slop: 0.1
+
+semantic_map:
+  ros__parameters:
+    use_sim_time: true
+    map_frame: map
+    assoc_radius: 0.5           # m. To tune, and to discuss in the README
+    min_observations: 3
+    min_confidence: 0.4
+    snapshot_path: /tmp/semantic_map.json
+
+commander:
+  ros__parameters:
+    use_sim_time: true
+    map_frame: map
+    base_frame: base_link
+    standoff: 0.7               # m, distance kept in front of the object
+    use_llm: true               # false = keyword parser only
+    llm_model: qwen2.5:3b
+    trials_csv: /tmp/semantic_nav_trials.csv
