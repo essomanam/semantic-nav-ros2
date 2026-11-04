@@ -1,6 +1,6 @@
 # Navigation sémantique en langage naturel pour robot mobile (ROS 2)
 
-> **À remplacer en semaine 6** : GIF ou vidéo de démo de 60 à 90 s ici, tout en haut.
+> **État : finalisation en cours.** La vidéo de démo et les résultats chiffrés seront publiés ici après la campagne de mesures.
 
 Un robot mobile explore une pièce, construit sa carte, reconnaît les objets qu'il voit et les place
 sur cette carte. On peut ensuite lui dire « va vers la chaise la plus proche », et il y va seul.
@@ -35,15 +35,24 @@ peut pas inventer de coordonnées, et si le LLM ne répond pas, un parseur par m
 
 ## Résultats
 
-> À remplir en semaine 6. Garder des chiffres honnêtes, y compris les échecs.
+Campagne de mesures en cours. Les résultats publiés incluront aussi les échecs.
 
 | Mesure | Valeur |
 |---|---|
-| Erreur moyenne de localisation des objets | … m |
-| Précision / rappel de la carte sémantique | … / … |
-| Taux de réussite de navigation (N = 30 commandes) | … % |
-| Interprétation correcte des commandes : mots-clés / LLM | … % / … % |
-| Latence du détecteur (CPU / GPU) | … ms / … ms |
+| Erreur moyenne de localisation des objets | à mesurer |
+| Précision / rappel de la carte sémantique | à mesurer |
+| Taux de réussite de navigation (N = 30 commandes) | à mesurer |
+| Interprétation correcte des commandes : mots-clés / LLM | à mesurer |
+| Latence du détecteur (CPU / GPU) | à mesurer |
+
+## Reste à faire
+
+- [ ] Réaliser les 30 essais de navigation
+- [ ] Comparer le parseur par mots-clés et le LLM sur les phrases de test
+- [ ] Mesurer la latence du détecteur
+- [ ] Mettre en place l'intégration continue (tests unitaires et compilation)
+- [ ] Enregistrer la vidéo de démo
+- [ ] Publier les résultats
 
 ## Limites connues
 
@@ -82,4 +91,4 @@ docs/                          installation, ajout de la caméra RGB-D
 ## Auteur
 
 Esso-Manam MANGANMANA, M2 Robotique et Systèmes Autonomes, UTBM.
-[LinkedIn](…) · manganmanasamuel@gmail.com
+[Portfolio](https://essomanam.github.io) · [LinkedIn](https://www.linkedin.com/in/essomanam-manganmana) · manganmanasamuel@gmail.com
